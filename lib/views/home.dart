@@ -64,7 +64,7 @@ class Home extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "Wants",
-                            style: TextStyle(color: Colors.teal[200]),
+                            style: TextStyle(color: Colors.teal[200],fontWeight: FontWeight.bold),
                           ),
                         ),
                         decoration: BoxDecoration(
@@ -78,6 +78,35 @@ class Home extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Container(
+                  height: 10,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.teal[50],
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                  ),
+                  child:Row(
+                    children: [
+                      Container(
+                         height: 10,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.teal[200],
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                      )),
+                      Container(
+                         height: 10,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    color: Colors.teal[100],
+                    borderRadius: BorderRadius.only(topRight: Radius.circular(5),bottomRight: Radius.circular(5)),
+                      ))
+                    ],
+                  )
                 ),
               )
             ],
