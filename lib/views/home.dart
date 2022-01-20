@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
                     children: [
                       Text(
                         "Essentials",
-                        style: TextStyle(color: Colors.teal[200]),
+                        style: TextStyle(color: Colors.teal),
                       ),
                       Container(
                         height: 45,
@@ -64,7 +64,7 @@ class Home extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "Wants",
-                            style: TextStyle(color: Colors.teal[200],fontWeight: FontWeight.bold),
+                            style: TextStyle(color: Colors.teal,fontWeight: FontWeight.bold),
                           ),
                         ),
                         decoration: BoxDecoration(
@@ -74,7 +74,7 @@ class Home extends StatelessWidget {
                       ),
                       Text(
                         "Savings",
-                        style: TextStyle(color: Colors.teal[200]),
+                        style: TextStyle(color: Colors.teal),
                       ),
                     ],
                   ),
@@ -93,7 +93,7 @@ class Home extends StatelessWidget {
                     children: [
                       Container(
                          height: 10,
-                  width: 50,
+                  width: 60,
                   decoration: BoxDecoration(
                     color: Colors.teal[200],
                     borderRadius: BorderRadius.all(Radius.circular(5)),
