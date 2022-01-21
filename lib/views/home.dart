@@ -43,7 +43,7 @@ class Home extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.all(18.0),
+                padding: const EdgeInsets.only(left: 18.0, right: 18, top: 38),
                 child: Container(
                   height: 50,
                   width: double.infinity,
@@ -64,7 +64,9 @@ class Home extends StatelessWidget {
                         child: Center(
                           child: Text(
                             "Wants",
-                            style: TextStyle(color: Colors.teal,fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                color: Colors.teal,
+                                fontWeight: FontWeight.bold),
                           ),
                         ),
                         decoration: BoxDecoration(
@@ -81,32 +83,228 @@ class Home extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(18.0),
+                padding: const EdgeInsets.only(left: 18.0, top: 48, right: 18),
                 child: Container(
-                  height: 10,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.teal[50],
-                    borderRadius: BorderRadius.all(Radius.circular(5)),
-                  ),
-                  child:Row(
-                    children: [
-                      Container(
-                         height: 10,
-                  width: 60,
-                  decoration: BoxDecoration(
-                    color: Colors.teal[200],
-                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                    height: 10,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.teal[50],
+                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                            height: 10,
+                            width: 60,
+                            decoration: BoxDecoration(
+                              color: Colors.teal[200],
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5)),
+                            )),
+                        Container(
+                            height: 10,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              color: Colors.teal[100],
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(5),
+                                  bottomRight: Radius.circular(5)),
+                            ))
+                      ],
+                    )),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0, top: 38),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      height: 20,
+                      width: 20,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.teal,
+                      ),
+                    ),
+                    Text("KES 24,000 spent",
+                        style: TextStyle(
+                            color: Colors.teal, fontWeight: FontWeight.bold)),
+                    Container(
+                      height: 20,
+                      width: 20,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.teal[200],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 18.0),
+                      child: Text("KES 5,000 available",
+                          style: TextStyle(
+                              color: Colors.teal, fontWeight: FontWeight.bold)),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0, top: 38),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 20,
+                      width: 20,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.teal[100],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 27.0),
+                      child: Text("KES 5,000 unallocated",
+                          style: TextStyle(
+                              color: Colors.teal, fontWeight: FontWeight.bold)),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0, top: 38),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text("Family & Friends",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18)),
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.teal, width: 2),
+                          shape: BoxShape.circle),
+                      child:
+                          Center(child: Icon(Icons.remove, color: Colors.teal)),
+                    ),
+                    Container(
+                      height: 30,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(15),
+                        ),
+                      ),
+                      child: Center(
+                          child: Text(
+                        "KES 5,000",
+                        style: TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.bold),
                       )),
-                      Container(
-                         height: 10,
-                  width: 150,
-                  decoration: BoxDecoration(
-                    color: Colors.teal[100],
-                    borderRadius: BorderRadius.only(topRight: Radius.circular(5),bottomRight: Radius.circular(5)),
-                      ))
-                    ],
-                  )
+                    ),
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.teal, width: 2),
+                          shape: BoxShape.circle),
+                      child: Center(child: Icon(Icons.add, color: Colors.teal)),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0, top: 38),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text("Going out",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18)),
+                    Padding(
+                      padding: const EdgeInsets.only(left:50.0),
+                      child: Container(
+                        height: 30,
+                        width: 30,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.teal, width: 2),
+                            shape: BoxShape.circle),
+                        child:
+                            Center(child: Icon(Icons.remove, color: Colors.teal)),
+                      ),
+                    ),
+                    Container(
+                        height: 30,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                        ),
+                         child: Center(
+                          child: Text(
+                        "KES 5,000",
+                        style: TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.bold),
+                      )),
+                        ),
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.teal, width: 2),
+                          shape: BoxShape.circle),
+                      child: Center(child: Icon(Icons.add, color: Colors.teal)),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0, top: 38),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text("Miscellaneous",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18)),
+                    Padding(
+                      padding: const EdgeInsets.only(left:8.0),
+                      child: Container(
+                        height: 30,
+                        width: 30,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.teal, width: 2),
+                            shape: BoxShape.circle),
+                        child:
+                            Center(child: Icon(Icons.remove, color: Colors.teal)),
+                      ),
+                    ),
+                    Container(
+                        height: 30,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                        ),
+                         child: Center(
+                          child: Text(
+                        "KES 5,000",
+                        style: TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.bold),
+                      )),
+                        ),
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.teal, width: 2),
+                          shape: BoxShape.circle),
+                      child: Center(child: Icon(Icons.add, color: Colors.teal)),
+                    ),
+                  ],
                 ),
               )
             ],
